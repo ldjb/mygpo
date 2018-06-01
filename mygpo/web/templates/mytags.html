@@ -23,11 +23,11 @@
   {% for tag, podcast_list in tags_tag.items %}
    <tr>
     <td>{{ tag }}</td>
-    <td>
-     {% for podcast in podcast_list %}
+    {% for podcast in podcast_list %}
+     <td class="logo">
       <a href="{% podcast_link_target podcast %}">{{ podcast|podcast_logo }}</a>
-     {% endfor %}
-    </td>
+     </td>
+    {% endfor %}
    </tr>
   {% endfor %}
 
